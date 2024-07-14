@@ -1,0 +1,286 @@
+{
+  "crypto": [
+    {
+      "pair": "btc/eth",
+      "address": "0x5fb1616F78dA7aFC9FF79e0371741a747D2a7F22",
+      "decimal": "18",
+      "category": "crypto"
+    },
+    {
+      "pair": "btc/usd",
+      "address": "0x1b44F3514812d835EB1BDB0acB33d3fA3351Ee43",
+      "decimal": "8",
+      "category": "crypto"
+    },
+    {
+      "pair": "dai/usd",
+      "address": "0x14866185B1962B63C3Ea9E03Bc1da838bab34C19",
+      "decimal": "8",
+      "category": "crypto"
+    },
+    {
+      "pair": "eth/usd",
+      "address": "0x694AA1769357215DE4FAC081bf1f309aDC325306",
+      "decimal": "8",
+      "category": "crypto"
+    },
+    {
+      "pair": "forth/usd",
+      "address": "0x070bF128E88A4520b3EfA65AB1e4Eb6F0F9E6632",
+      "decimal": "8",
+      "category": "crypto"
+    },
+    {
+      "pair": "gho/usd",
+      "address": "0x635A86F9fdD16Ff09A0701C305D3a845F1758b8E",
+      "decimal": "8",
+      "category": "crypto"
+    },
+    {
+      "pair": "link/eth",
+      "address": "0x42585eD362B3f1BCa95c640FdFf35Ef899212734",
+      "decimal": "18",
+      "category": "crypto"
+    },
+    {
+      "pair": "link/usd",
+      "address": "0xc59E3633BAAC79493d908e63626716e204A45EdF",
+      "decimal": "8",
+      "category": "crypto"
+    },
+    {
+      "pair": "snx/usd",
+      "address": "0xc0F82A46033b8BdBA4Bb0B0e28Bc2006F64355bC",
+      "decimal": "8",
+      "category": "crypto"
+    },
+    {
+      "pair": "susde/usd",
+      "address": "0x6f7be09227d98Ce1Df812d5Bc745c0c775507E92",
+      "decimal": "8",
+      "category": "crypto"
+    },
+    {
+      "pair": "usdc/usd",
+      "address": "0xA2F78ab2355fe2f984D808B5CeE7FD0A93D5270E",
+      "decimal": "8",
+      "category": "crypto"
+    },
+    {
+      "pair": "usde/usd",
+      "address": "0x55ec7c3ed0d7CB5DF4d3d8bfEd2ecaf28b4638fb",
+      "decimal": "8",
+      "category": "crypto"
+    },
+    {
+      "pair": "wsteth/usd",
+      "address": "0xaaabb530434B0EeAAc9A42E25dbC6A22D7bE218E",
+      "decimal": "8",
+      "category": "crypto"
+    }
+  ],
+  "equity": {
+    "uk": [
+      {
+        "pair": "cspx/usd",
+        "address": "0x4b531A318B0e44B549F3b2f824721b3D0d51930A",
+        "decimal": "8",
+        "category": "equity",
+        "sub_category": "uk"
+      },
+      {
+        "pair": "ib01/usd",
+        "address": "0xB677bfBc9B09a3469695f40477d05bc9BcB15F50",
+        "decimal": "8",
+        "category": "equity",
+        "sub_category": "uk"
+      }
+    ]
+  },
+  "fx": [
+    {
+      "pair": "aud/usd",
+      "address": "0xB0C712f98daE15264c8E26132BCC91C40aD4d5F9",
+      "decimal": "8",
+      "category": "fx"
+    },
+    {
+      "pair": "czk/usd",
+      "address": "0xC32f0A9D70A34B9E7377C10FDAd88512596f61EA",
+      "decimal": "8",
+      "category": "fx"
+    },
+    {
+      "pair": "eur/usd",
+      "address": "0x1a81afB8146aeFfCFc5E50e8479e826E7D55b910",
+      "decimal": "8",
+      "category": "fx"
+    },
+    {
+      "pair": "gbp/usd",
+      "address": "0x91FAB41F5f3bE955963a986366edAcff1aaeaa83",
+      "decimal": "8",
+      "category": "fx"
+    },
+    {
+      "pair": "ibta/usd",
+      "address": "0x5c13b249846540F81c093Bc342b5d963a7518145",
+      "decimal": "8",
+      "category": "fx"
+    },
+    {
+      "pair": "jpy/usd",
+      "address": "0x8A6af2B75F23831ADc973ce6288e5329F63D86c6",
+      "decimal": "8",
+      "category": "fx"
+    }
+  ],
+  "comodities": {
+    "metals": [
+      {
+        "pair": "xau/usd",
+        "address": "0xC5981F461d74c46eB4b0CF3f4Ec79f025573B0Ea",
+        "decimal": "8",
+        "category": "commodities",
+        "sub_category": "metals"
+      }
+    ]
+  },
+  "all": [
+    {
+      "pair": "xau/usd",
+      "address": "0xC5981F461d74c46eB4b0CF3f4Ec79f025573B0Ea",
+      "decimal": "8",
+      "category": "commodities",
+      "sub_category": "metals"
+    },
+    {
+      "pair": "aud/usd",
+      "address": "0xB0C712f98daE15264c8E26132BCC91C40aD4d5F9",
+      "decimal": "8",
+      "category": "fx"
+    },
+    {
+      "pair": "czk/usd",
+      "address": "0xC32f0A9D70A34B9E7377C10FDAd88512596f61EA",
+      "decimal": "8",
+      "category": "fx"
+    },
+    {
+      "pair": "eur/usd",
+      "address": "0x1a81afB8146aeFfCFc5E50e8479e826E7D55b910",
+      "decimal": "8",
+      "category": "fx"
+    },
+    {
+      "pair": "gbp/usd",
+      "address": "0x91FAB41F5f3bE955963a986366edAcff1aaeaa83",
+      "decimal": "8",
+      "category": "fx"
+    },
+    {
+      "pair": "ibta/usd",
+      "address": "0x5c13b249846540F81c093Bc342b5d963a7518145",
+      "decimal": "8",
+      "category": "fx"
+    },
+    {
+      "pair": "jpy/usd",
+      "address": "0x8A6af2B75F23831ADc973ce6288e5329F63D86c6",
+      "decimal": "8",
+      "category": "fx"
+    },
+    {
+      "pair": "cspx/usd",
+      "address": "0x4b531A318B0e44B549F3b2f824721b3D0d51930A",
+      "decimal": "8",
+      "category": "equity",
+      "sub_category": "uk"
+    },
+    {
+      "pair": "ib01/usd",
+      "address": "0xB677bfBc9B09a3469695f40477d05bc9BcB15F50",
+      "decimal": "8",
+      "category": "equity",
+      "sub_category": "uk"
+    },
+    {
+      "pair": "btc/eth",
+      "address": "0x5fb1616F78dA7aFC9FF79e0371741a747D2a7F22",
+      "decimal": "18",
+      "category": "crypto"
+    },
+    {
+      "pair": "btc/usd",
+      "address": "0x1b44F3514812d835EB1BDB0acB33d3fA3351Ee43",
+      "decimal": "8",
+      "category": "crypto"
+    },
+    {
+      "pair": "dai/usd",
+      "address": "0x14866185B1962B63C3Ea9E03Bc1da838bab34C19",
+      "decimal": "8",
+      "category": "crypto"
+    },
+    {
+      "pair": "eth/usd",
+      "address": "0x694AA1769357215DE4FAC081bf1f309aDC325306",
+      "decimal": "8",
+      "category": "crypto"
+    },
+    {
+      "pair": "forth/usd",
+      "address": "0x070bF128E88A4520b3EfA65AB1e4Eb6F0F9E6632",
+      "decimal": "8",
+      "category": "crypto"
+    },
+    {
+      "pair": "gho/usd",
+      "address": "0x635A86F9fdD16Ff09A0701C305D3a845F1758b8E",
+      "decimal": "8",
+      "category": "crypto"
+    },
+    {
+      "pair": "link/eth",
+      "address": "0x42585eD362B3f1BCa95c640FdFf35Ef899212734",
+      "decimal": "18",
+      "category": "crypto"
+    },
+    {
+      "pair": "link/usd",
+      "address": "0xc59E3633BAAC79493d908e63626716e204A45EdF",
+      "decimal": "8",
+      "category": "crypto"
+    },
+    {
+      "pair": "snx/usd",
+      "address": "0xc0F82A46033b8BdBA4Bb0B0e28Bc2006F64355bC",
+      "decimal": "8",
+      "category": "crypto"
+    },
+    {
+      "pair": "susde/usd",
+      "address": "0x6f7be09227d98Ce1Df812d5Bc745c0c775507E92",
+      "decimal": "8",
+      "category": "crypto"
+    },
+    {
+      "pair": "usdc/usd",
+      "address": "0xA2F78ab2355fe2f984D808B5CeE7FD0A93D5270E",
+      "decimal": "8",
+      "category": "crypto"
+    },
+    {
+      "pair": "usde/usd",
+      "address": "0x55ec7c3ed0d7CB5DF4d3d8bfEd2ecaf28b4638fb",
+      "decimal": "8",
+      "category": "crypto"
+    },
+    {
+      "pair": "wsteth/usd",
+      "address": "0xaaabb530434B0EeAAc9A42E25dbC6A22D7bE218E",
+      "decimal": "8",
+      "category": "crypto"
+    }
+  ]
+}

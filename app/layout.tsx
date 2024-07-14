@@ -1,6 +1,12 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import { ThemeProvider } from "@/context/theme-provider";
+import { ModeToggle } from "@/components/darkmode-toggle";
+import { NavBar } from "@/components/navbar";
+import PrelineScript from "@/components/PrelineScript";
+import Header from "@/components/header";
+import Sidebar from "@/components/side-bar";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -15,8 +21,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <html lang="en" suppressHydrationWarning>
+        <body className={inter.className}>
+       <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange> 
+        <Header />
+        <Sidebar />
+        {children}
+        </ThemeProvider>
+        </body>
+        <PrelineScript />
     </html>
   );
 }
