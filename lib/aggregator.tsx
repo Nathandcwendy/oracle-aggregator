@@ -3,12 +3,12 @@ import { Web3 } from "web3";
 import pythData from "@/db/pyth-id.json";
 import chainlinkData from "@/db/chainlink.json";
 
-type PairData = {
+export type PairData = {
   pair: string,
   address?: string,
-  category: string,
+  category: "fx"|"crypto"|"equity"|"commodities"|"rates"|string,
   decimal?: string,
-  sub_category?:string|null
+  sub_category?:string|null,
 }
 
 class Aggregator {
@@ -112,11 +112,15 @@ class Aggregator {
     const [pythConnection, pythPriceIds, err] = this.#getPyth(pairString);
     if (!err && pythConnection != null) {
       promisesArr.push(pythConnection.getLatestPriceFeeds(pythPriceIds));
+    } else {
+      return "an error occured, please reload"
     }
     const [chainlinkMethod, chainlinkDecimal, errChainlink] =
       this.#getChainlink(pairString);
     if (!errChainlink && chainlinkMethod) {
       promisesArr.push(chainlinkMethod.call());
+    } else {
+      return "an error occured, please reload"
     }
     if (promisesArr.length > 1) {
       const [pythValue, chainlinkValue] = await Promise.all(promisesArr);
@@ -143,7 +147,8 @@ class Aggregator {
           },
         ],
         average,
-        pairData
+        pairData,
+        lastUpdated: Date.now()
       };
     } else {
       return "invalid pair";
@@ -151,32 +156,9 @@ class Aggregator {
   };
 }
 
-// let aggregator = new Aggregator(pythData, chainlinkData);
-
-// export type ResData = "invalid pair" | {
-//   pair: string;
-//   providerData: {
-//       provider: string;
-//       decimal: any;
-//       value: any;
-//   }[];
-//   average: string;
-// } | {
-//   pair: string;
-//   providerData: {
-//       provider: string;
-//       decimal: any;
-//       value: any;
-//   }[];
-//   average: string;
-//   pairData: PairData
-// }
-
-
 export const getManyAggregates = async (pairArr: PairData[], aggregator: Aggregator) => {
   let result = [];
-  for (const [key, value] of pairArr.entries()) {
-    let obj = {}
+  for (const [, value] of pairArr.entries()) {
     const res = await aggregator.aggregate(value);
     result.push(res)
   }

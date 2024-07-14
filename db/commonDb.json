@@ -68,5 +68,18 @@
     { "pair": "cspx/usd", "category": "equity", "sub_category": "uk" },
     { "pair": "ib01/usd", "category": "equity", "sub_category": "uk" },
     { "pair": "ibta/usd", "category": "fx", "sub_category": null }
-  ]
+  ],
+  "images": {
+    "aud/usd": "https://raw.githubusercontent.com/bandprotocol/band-resources/main/tokens/aud.png",
+    "eur/usd": "https://raw.githubusercontent.com/bandprotocol/band-resources/main/tokens/eur.png",
+    "gbp/usd": "https://raw.githubusercontent.com/bandprotocol/band-resources/main/tokens/gbp.png",
+    "xau/usd": "https://raw.githubusercontent.com/bandprotocol/band-resources/main/tokens/xau.png",
+    "btc/usd": "https://raw.githubusercontent.com/bandprotocol/band-resources/main/tokens/btc.png",
+    "dai/usd": "https://raw.githubusercontent.com/bandprotocol/band-resources/main/tokens/dai.png",
+    "eth/usd": "https://raw.githubusercontent.com/bandprotocol/band-resources/main/tokens/eth.png",
+    "link/usd": "https://raw.githubusercontent.com/bandprotocol/band-resources/main/tokens/link.png",
+    "susde/usd": "https://raw.githubusercontent.com/bandprotocol/band-resources/main/tokens/snx.png",
+    "usdc/usd": "https://raw.githubusercontent.com/bandprotocol/band-resources/main/tokens/usdc.png",
+    "default": "https://avatars.githubusercontent.com/u/107022154?v=4"
+  }
 }

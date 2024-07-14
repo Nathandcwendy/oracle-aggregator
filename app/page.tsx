@@ -4,6 +4,8 @@ import { Payment, columns } from "./columns";
 import { getData } from "@/lib/prepareData";
 import * as React from "react"
 import { Divide } from "lucide-react";
+import Card from "@/components/ui/card";
+
 
 type AggregatorData = AggregatorPairData[]
 
@@ -40,28 +42,13 @@ export default async function Home() {
   return (
     <main className="w-full lg:ps-64">
     <div className="p-2 py-4 sm:p-4 md:p-6 space-y-4 sm:space-y-6">
-      {data.map((item, index) => (<div key={index}>
-        {typeof item == "string" ? <span>{item}</span> : <>
-        <h1>
-          {item.pair}
-          </h1>
-        <h1>
-          {item.average}
-          </h1>
-        <h1>
-          {item.pairData.category}
-          </h1>
-        <h1>
-          {item.providerData[0].provider}: {item.providerData[0].price}
-          </h1>
-        <h1>
-          {item.providerData[1].provider}: {Number(item.providerData[1].price)}
-          </h1>
-
-          </>}
-      </div>))}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-x-6 gap-y-6 p-6 md:p-2 justify-items-center">
+      {data.map((item, index) => (typeof item != "string" ? <Card key={index} data={item} /> : "item"))}
+      </div>
     {/* <DataTable columns={columns} data={data} /> */}
+    
     </div>
   </main>
+  
   );
 }
