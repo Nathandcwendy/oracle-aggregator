@@ -147,19 +147,19 @@ const Sidebar = () => {
         <div id="projects-accordion-child" className="hs-accordion-content w-full overflow-hidden transition-[height] duration-300 hidden">
           <ul className="pt-2 ps-2">
             <li>
-              <a className="flex items-center gap-x-3.5 py-2 px-2.5 text-sm text-neutral-700 rounded-lg hover:bg-gray-100 dark:hover:bg-bgTertiaryDark dark:bg-bgSecondaryDark dark:text-neutral-400 dark:hover:text-neutral-300" href="https://pyth.network/">
+              <a className="flex items-center gap-x-3.5 py-2 px-2.5 text-sm text-neutral-700 rounded-lg hover:bg-gray-100 dark:hover:bg-bgTertiaryDark dark:bg-bgSecondaryDark dark:text-neutral-400 dark:hover:text-neutral-300" href="https://pyth.network/" target='_blank'>
                 Pyth Core
               </a>
             </li>
             <li>
-              <a className="flex items-center gap-x-3.5 py-2 px-2.5 text-sm text-neutral-700 rounded-lg hover:bg-gray-100 dark:hover:bg-bgTertiaryDark dark:bg-bgSecondaryDark dark:text-neutral-400 dark:hover:text-neutral-300" href="https://chain.link/">
+              <a className="flex items-center gap-x-3.5 py-2 px-2.5 text-sm text-neutral-700 rounded-lg hover:bg-gray-100 dark:hover:bg-bgTertiaryDark dark:bg-bgSecondaryDark dark:text-neutral-400 dark:hover:text-neutral-300" href="https://chain.link/" target='_blank'>
                 Chainlink
               </a>
             </li>
           </ul>
         </div>
       </li>
-      <li><a className="w-full flex items-center gap-x-3.5 py-2 px-2.5 text-sm text-neutral-700 rounded-lg hover:bg-gray-100 dark:hover:bg-bgTertiaryDark dark:text-neutral-400 dark:hover:text-neutral-300" href="https://github.com/Nathandcwendy/oracle-aggregator">
+      <li><a className="w-full flex items-center gap-x-3.5 py-2 px-2.5 text-sm text-neutral-700 rounded-lg hover:bg-gray-100 dark:hover:bg-bgTertiaryDark dark:text-neutral-400 dark:hover:text-neutral-300" href="https://github.com/Nathandcwendy/oracle-aggregator" target='_blank'>
         <svg className="flex-shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
         Documentation
       </a></li>

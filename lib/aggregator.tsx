@@ -73,6 +73,7 @@ class Aggregator {
     this.#pythData = pythData;
     this.#chainlinkData = chainlinkData
     }
+  // Get Pyth Oracle Data Feed
   #getPyth = (pairString: string): [null, null, string]|[PriceServiceConnection, string[], null] => {
     const pythPriceIds = [];
     const getPairAddress = (pairString: string) => {
@@ -93,19 +94,22 @@ class Aggregator {
       return [null, null, "invalid pair"];
     }
   };
+  // Get Chainlink Data Feed
   #getChainlink = (pairString: string):[null, null, string]|[any, string, null] => {
     const pair = this.#chainlinkData.all.find((i: PairData) => i.pair == pairString);
     if (!pair) {
       return [null, null, "invalid pair"];
     }
     const addr = pair.address;
-    const priceFeed = new this.#web3.eth.Contract(
+    const chainlinkContract = new this.#web3.eth.Contract(
       this.#aggregatorV3InterfaceABI,
       addr
     );
-    return [priceFeed.methods.latestRoundData(), pair.decimal, null];
+    return [chainlinkContract.methods.latestRoundData(), pair.decimal, null];
   };
+  // Calculate Average
   #getAverage = (x:string|number, y:string|number): string => ((Number(x) + Number(y)) / 2).toFixed(5);
+  // Aggregator Function
   aggregate = async (pairData: PairData) => {
     const promisesArr = [];
     const pairString = pairData.pair

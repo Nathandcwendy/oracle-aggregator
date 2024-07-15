@@ -102,7 +102,7 @@ React.useEffect(() => {
     <div className='mt-1 hidden xs:flex xs:flex-col'>
       <span>Category:</span>
     <p className="mt-2 gap-1 hidden xs:flex">
-      <span className='p-px px-3 rounded-xl bg-bgTertiaryLight dark:bg-bgPrimaryDark'>
+      <span className='p-0.5 px-3 rounded-xl bg-bgTertiaryLight dark:bg-bgTertiaryDark'>
       {data.pairData.category && data.pairData.sub_category ? `${getCategory(data.pairData.category)} / ${getCategory(data.pairData.sub_category)}` : getCategory(data.pairData.category)}
       </span>
     </p>
@@ -110,11 +110,11 @@ React.useEffect(() => {
     <div className='mt-1 hidden xs:flex xs:flex-col'>
       <span>Providers:</span>
     <div className="mt-2 hidden xs:flex flex-wrap items-center gap-2">
-      {data.providerData.map((item , index) => (<span className='p-px px-3 rounded-xl bg-bgTertiaryLight dark:bg-bgPrimaryDark' key={index}>{item.provider}</span>))}
+      {data.providerData.map((item , index) => (<span className='p-0.5 px-3 rounded-xl bg-bgTertiaryLight dark:bg-bgTertiaryDark' key={index}>{item.provider}</span>))}
     </div>
     </div>
   </div>
-  <div className="bg-gray-100 border-t rounded-b-xl py-3 px-4 md:py-4 md:px-5 dark:bg-bgPrimaryDark dark:border-neutral-700">
+  <div className="bg-gray-100 border-t rounded-b-xl py-3 px-4 md:py-4 md:px-5 dark:bg-bgTertiaryDark dark:border-neutral-700">
     <p className="mt-1 text-sm">
       Last updated {lastUpdated} ago
     </p>

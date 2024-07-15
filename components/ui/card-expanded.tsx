@@ -66,13 +66,6 @@ const getImage = (pairString: string) => {
   }
 }
 
-const getUrl = (pairString: string) => {
-  const splitPair = pairString.split("/")
-  if (splitPair.length > 1) {
-    return splitPair.join("_")
-  }
-}
-
 const getPrice = (value: string|number) => {
   if (typeof value == "number") {
     return new Intl.NumberFormat("en-US", {
@@ -98,23 +91,22 @@ React.useEffect(() => {
 }, [data.lastUpdated])
 
   return (
-    <Link className='min-w-full' href={`/pair/${getUrl(data.pair)}`}>
-    <div className="flex flex-col bg-white border shadow-sm rounded-xl dark:bg-bgSecondaryDark dark:border-neutral-700 dark:shadow-neutral-700/70 font-medium">
+    <div className="flex flex-col bg-white border shadow-sm rounded-xl dark:bg-bgSecondaryDark dark:border-neutral-700 dark:shadow-neutral-700/70 font-medium min-w-full">
   <div className="p-3 xs:p-4 md:p-5 flex flex-col justify-normal  items-start gap-2">
-    <h3 className="text-lg xs:text-xl font-bold text-gray-800 dark:text-white uppercase flex gap-1 xs:gap-2 sm:gap-3 items-center">
+    <h3 className="text-lg xs:text-2xl sm:text-3xl  font-bold text-gray-800 dark:text-white uppercase flex gap-1 xs:gap-2 sm:gap-3 items-center">
     <Image width={20} height={20} className='w-5 h-5 xs:w-6 xs:h-6 sm:w-7 sm:h-7 rounded-full' src={getImage(data.pair)} alt={`${data.pair} icon`}></Image>
       <span>
       {data.pair}
       </span>
     </h3>
-    <p className={`${alata.className} xs:mt-2 text-xl tracking-widest`}>
+    <p className={`${alata.className} xs:my-2 text-xl xs:text-2xl sm:text-4xl tracking-widest`}>
       {getPrice(data.average)}
       {/* ${data.average} */}
     </p>
     <div className='mt-1 flex flex-col'>
       <span>Category:</span>
     <p className="mt-2 gap-1 hidden xs:flex">
-      <span className='p-px px-3 rounded-xl bg-bgTertiaryLight dark:bg-bgPrimaryDark'>
+      <span className='p-px px-3 rounded-xl bg-bgTertiaryLight dark:bg-bgTertiaryDark'>
       {getCategory(data.pairData.category)}
       </span>
     </p>
@@ -122,7 +114,7 @@ React.useEffect(() => {
     {data.pairData.sub_category && <div className='mt-1 flex flex-col'>
       <span>Category:</span>
     <p className="mt-2 gap-1 hidden xs:flex">
-      <span className='p-px px-3 rounded-xl bg-bgTertiaryLight dark:bg-bgPrimaryDark'>
+      <span className='p-0.5 px-3 rounded-xl bg-bgTertiaryLight dark:bg-bgTertiaryDark'>
       {getCategory(data.pairData.sub_category)}
       </span>
     </p>
@@ -130,15 +122,15 @@ React.useEffect(() => {
     <div className='mt-1 flex flex-col'>
       <span>Providers:</span>
     <div className="mt-2 flex flex-wrap items-center gap-2">
-      {data.providerData.map((item , index) => (<span className='p-px px-3 rounded-xl bg-bgTertiaryLight dark:bg-bgPrimaryDark' key={index}>{item.provider}</span>))}
+      {data.providerData.map((item , index) => (<span className='p-0.5 px-3 rounded-xl bg-bgTertiaryLight dark:bg-bgTertiaryDark' key={index}>{item.provider}</span>))}
     </div>
     </div>
     <div className='mt-1 flex flex-col'>
       <span>Provider Information:</span>
     <div className="mt-2 flex flex-wrap items-center gap-3">
       {data.providerData.map((item , index) => (
-        <div key={index} className='p-px px-3 rounded-xl bg-bgTertiaryLight dark:bg-bgPrimaryDark flex flex-col gap-2'>
-          <h2>{item.provider}</h2>
+        <div key={index} className='p-2 px-3 rounded-xl bg-bgTertiaryLight dark:bg-bgTertiaryDark flex flex-col gap-2'>
+          <h2 className='capitalize'>{item.provider}</h2>
           <span className={`${alata.className} tracking-widest text-lg`}>{getPrice(item.price)}</span>
           <span>Network: {item.provider == "pyth" ? "pyth_evm_stable" : "eth_sepolia"}</span>
         </div>
@@ -146,13 +138,12 @@ React.useEffect(() => {
     </div>
     </div>
   </div>
-  <div className="bg-gray-100 border-t rounded-b-xl py-3 px-4 md:py-4 md:px-5 dark:bg-bgPrimaryDark dark:border-neutral-700">
+  <div className="bg-gray-100 border-t rounded-b-xl py-3 px-4 md:py-4 md:px-5 dark:bg-bgTertiaryDark dark:border-neutral-700">
     <p className="mt-1 text-sm">
       Last updated {lastUpdated} ago
     </p>
   </div>
 </div>
-    </Link>
   )
 }
 

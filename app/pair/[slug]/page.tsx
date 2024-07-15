@@ -1,3 +1,4 @@
+import BackArrow from "@/components/ui/back-arrow";
 import Card from "@/components/ui/card";
 import CardExpanded from "@/components/ui/card-expanded";
 import { getSinglePairData } from "@/lib/prepareData"
@@ -20,6 +21,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
     return (
       <main className="w-full lg:ps-64">
   <div className="p-4 sm:p-6 space-y-4 sm:space-y-6">
+    <BackArrow />
   <div>
       <CardExpanded data={data} />
     </div>
