@@ -4,7 +4,17 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Getting Started
 
-First, run the development server:
+First, you will need to clone this repo or download the code.
+
+I suggest using git to clone the repo by running:
+
+```bash
+git clone https://github.com/Nathandcwendy/oracle-aggregator.git
+```
+
+If you don't have git installed, install it and run the command above.
+
+Next, run the development server:
 
 ```bash
 npm run dev
