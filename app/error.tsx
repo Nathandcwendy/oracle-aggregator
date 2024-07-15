@@ -13,9 +13,9 @@ const Error = () => {
       <CircleAlert className="w-6 h-6 mr-2" color="#c21e1e" />
         An Error Occurred
       </span>
-      <Link className="py-2 px-4 inline-flex items-center gap-x-1 text-2xl lg:text-3xl font-medium bg-green-100 text-green-800 rounded-full dark:bg-green-500/10 dark:text-green-500" href="/">
+      <button className="py-2 px-4 inline-flex items-center gap-x-1 text-2xl lg:text-3xl font-medium bg-green-100 text-green-800 rounded-full dark:bg-green-500/10 dark:text-green-500" onClick={() => window.location.reload()} >
       Try Again
-        </Link>
+        </button>
     </div>
     </div>
   </main>

@@ -105,15 +105,15 @@ React.useEffect(() => {
     </p>
     <div className='mt-1 flex flex-col'>
       <span>Category:</span>
-    <p className="mt-2 gap-1 hidden xs:flex">
+    <p className="mt-2 gap-1 flex">
       <span className='p-px px-3 rounded-xl bg-bgTertiaryLight dark:bg-bgTertiaryDark'>
       {getCategory(data.pairData.category)}
       </span>
     </p>
     </div>
     {data.pairData.sub_category && <div className='mt-1 flex flex-col'>
-      <span>Category:</span>
-    <p className="mt-2 gap-1 hidden xs:flex">
+      <span>Subcategory:</span>
+    <p className="mt-2 gap-1 flex">
       <span className='p-0.5 px-3 rounded-xl bg-bgTertiaryLight dark:bg-bgTertiaryDark'>
       {getCategory(data.pairData.sub_category)}
       </span>
