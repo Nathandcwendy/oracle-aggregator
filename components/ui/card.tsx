@@ -5,6 +5,7 @@ import moment from 'moment'
 import { Alata } from "next/font/google";
 import { PairData } from '@/lib/aggregator';
 import Link from 'next/link';
+import Image from 'next/image';
 // import {images} from "@/db/commonDb.json"
 
 const alata = Alata({weight: "400", subsets: ["latin"]});
@@ -72,20 +73,20 @@ const getUrl = (pairString: string) => {
   }
 }
 
-const Card = ({data }: {data: Data}) => {
+const Card = ({data, key }: {data: Data, key: any}) => {
   const [lastUpdated, setLastUpdated] = React.useState(moment().from(data.lastUpdated, true))
 
 React.useEffect(() => {
   const interval = setInterval(() => {setLastUpdated(moment().from(data.lastUpdated, true)); console.log("interval has run")}, 60000)
   return () => clearInterval(interval)
-}, [])
+}, [data.lastUpdated])
 
   return (
-    <Link className='min-w-full' href={`/pair/${getUrl(data.pair)}`}>
+    <Link key={key} className='min-w-full' href={`/pair/${getUrl(data.pair)}`}>
     <div className="flex flex-col bg-white border shadow-sm rounded-xl dark:bg-bgSecondaryDark dark:border-neutral-700 dark:shadow-neutral-700/70 font-medium">
   <div className="p-3 xs:p-4 md:p-5 flex xs:flex-col xs:justify-normal justify-between items-center xs:items-start gap-2">
     <h3 className="text-lg xs:text-xl font-bold text-gray-800 dark:text-white uppercase flex gap-1 xs:gap-2 sm:gap-3 items-center">
-      <img className='w-5 h-5 xs:w-6 xs:h-6 sm:w-7 sm:h-7 rounded-full' src={getImage(data.pair)}></img>
+      <Image width={20} height={20} className='w-5 h-5 xs:w-6 xs:h-6 sm:w-7 sm:h-7 rounded-full' src={getImage(data.pair)} alt={`${data.pair} icon`}></Image>
       <span>
       {data.pair}
       </span>

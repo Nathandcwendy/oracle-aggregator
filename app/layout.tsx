@@ -2,8 +2,6 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/context/theme-provider";
-import { ModeToggle } from "@/components/darkmode-toggle";
-import { NavBar } from "@/components/navbar";
 import PrelineScript from "@/components/PrelineScript";
 import Header from "@/components/header";
 import Sidebar from "@/components/side-bar";
